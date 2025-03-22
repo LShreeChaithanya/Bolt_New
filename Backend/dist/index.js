@@ -20,7 +20,7 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 // Allow requests from the frontend
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5174", // replace with your frontend URL if different
+    origin: "http://localhost:5173", // replace with your frontend URL if different
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }));
@@ -94,17 +94,13 @@ app.post("/chat", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         },
         body: JSON.stringify({
             model: "meta-llama/llama-3.1-8b-instruct", //"deepseek/deepseek-r1-zero:free",
-            messages: [
-                {
-                    role: "user",
-                    content: message
-                },
-            ],
+            messages: message,
             system: (0, prompt_1.getSystemPrompt)(),
             temperature: 0.2,
-            max_tokens: 1000,
+            max_tokens: 8000,
         }),
     });
-    console.log(response);
-    res.json({});
+    const data = yield response.json();
+    //console.log(response);
+    res.json({ data });
 }));
