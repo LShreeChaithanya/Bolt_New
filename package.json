@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  },
+  "name": "bolt_replica",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "undici-types": "^6.20.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LShreeChaithanya/Bolt_Replica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LShreeChaithanya/Bolt_Replica/issues"
+  },
+  "homepage": "https://github.com/LShreeChaithanya/Bolt_Replica#readme",
+  "description": ""
+}

@@ -1,0 +1,13 @@
+
+{
+  "compilerOptions": {
+    "types": ["node", "react", "prop-types"],   
+    "strict": true,  // Optional: Enables strict type checking
+    "esModuleInterop": true,                    
+    "skipLibCheck": true,
+    "jsx": "react-jsx"   
+  },
+  "include": [
+    "src/**/*"                                   
+  ]
+}
